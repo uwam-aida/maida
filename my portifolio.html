@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head >
+  <body class="bg-gray-100 dark:bg-gray-900 dark:text-white text-gray-900">
+    <main class="flex items-center justify-center min-h-screen" >
+      <section class="dark:bg-gray-800 shadow-lg rounded-2xl p-6 max-w-sm w-full transition-all duration-300">
+        <article class="text-center">
+
+          <div class="bg-black py-2 flex justify-center space-x-2">
+            <button class="navcontent px-4 py-2 text-white hover:bg-gray-300 transition">Home</button>
+            <button class="navcontent px-4 py-2 text-white hover:bg-gray-500 transition">About</button>
+            <button class="navcontent px-4 py-2 text-white hover:bg-gray-500 transition">Skills</button>
+          </div>
+
+          <figure>
+            <img src="myimg.jpg" class="rounded-full mx-auto h-32 w-32 animate-pulse" alt="My Image">
+            <div class="flex justify-center items-center">
+              <figcaption class="mt-4 text-xl font-semibold text-center">Maida</figcaption>
+            </div>
+          </figure>
+
+          <div id="About" class="navcontent m-2">
+            <button id="moreBtn" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded transition">
+              About me
+            </button>
+            <p>I am a web developer and I currently study at University of Kigali.</p>
+          </div>
+
+          <div id="moreContent" class="hidden mt-4 text-left transition-all">
+            <h3 class="font-bold mb-1">Skills:</h3>
+            <ul class="list-disc list-inside">
+              <li>Web development</li>
+              <li>Web design</li>
+            </ul>
+          </div>
+
+        </article>
+      </section>
+    </main>
+
+    <address class="mt-2 not-italic text-sm text-gray-600 dark:text-gray-400 text-center">
+      Kigali, Rwanda, Gasabo <br>
+      <a href="mailto:uwmaida@gmail.com" class="underline">uwmaida@gmail.com</a>
+    </address>
+
+    <time datetime="2025-04-12" class="block mt-2 text-xs text-gray-500 text-center">
+      Updated: April 12, 2025
+    </time>
+
+    <script>
+      const moreBtn = document.getElementById("moreBtn");
+      const moreContent = document.getElementById("moreContent");
+      moreBtn.addEventListener("click", () => {
+        moreContent.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
